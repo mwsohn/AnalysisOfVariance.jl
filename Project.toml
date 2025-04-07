@@ -1,0 +1,16 @@
+name = "Anova"
+uuid = "01c9c671-d471-43d2-8b89-3af15e6b824d"
+version = "v0.0.1"
+
+[deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+GLM = "38e38edf-8417-5370-95a0-9cbb8c7f171a"
+StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
+CategoricalArrays = "324d7699-5711-5eae-9e2f-1d82baa6b597"
+PrettyTables = "08abe8d2-0d0c-5749-adfa-8a2ac140af0d"
+SweepOperator = "7522ee7d-7047-56d0-94d9-4bc626e7058d"
+
+[compat]
+julia = "1.11"
+SweepOperator = "0.3.4"
+
