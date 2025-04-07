@@ -20,8 +20,8 @@ anova(::StatsModels.TableRegressionModel)
 
 ## Options
 ```
-- type: Type of sums of squares to request. Available types are 1, 2, and 3 (default = 1)
-- interaction: set to `true` to include an interaction between two independent variables
+* type: Type of sums of squares to request. Available types are 1, 2, and 3 (default = 1)
+* interaction: set to `true` to include an interaction between two independent variables
 ```
 
 ## Return Struct
