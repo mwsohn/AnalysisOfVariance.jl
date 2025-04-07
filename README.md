@@ -11,11 +11,11 @@ an ANOVA table for a linear or GLM model.
 ## Syntax
 
 ```
-	anova(::DataFrame, depvar::Symbol, groupvar::Symbol)
-	anova(::DataFrame, depvar::Symbol, groupvar1::Symbol, groupvar2::Symbol; 
+anova(::DataFrame, depvar::Symbol, groupvar::Symbol)
+anova(::DataFrame, depvar::Symbol, groupvar1::Symbol, groupvar2::Symbol; 
         type = 1, interaction = false)
-  anova(::DataFrame, fm::FormulaTerm; type=1)
-  anova(::StatsModels.TableRegressionModel)
+anova(::DataFrame, fm::FormulaTerm; type=1)
+anova(::StatsModels.TableRegressionModel)
 ```
 
 ## Options
