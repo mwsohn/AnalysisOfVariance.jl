@@ -1,6 +1,6 @@
 module Anova
 
-using DataFrames, GLM, StatsBase, SweepOperator, PrettyTables, Printf
+using DataFrames, GLM, StatsBase, SweepOperator, PrettyTables, Printf, CategoricalArrays
 
 export anova, ANOVA
 
