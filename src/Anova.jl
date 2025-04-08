@@ -16,10 +16,10 @@ end
 
 
 """
-	anova(::DataFrame, depvar::Symbol, groupvar::Symbol)
-	anova(::DataFrame, depvar::Symbol, groupvar1::Symbol, groupvar2::Symbol; type = 1, interaction = false)
-    anova(::DataFrame, fm::FormulaTerm; type=1)
-    anova(::StatsModels.TableRegressionModel)
+anova(::DataFrame, depvar::Symbol, groupvar::Symbol)
+anova(::DataFrame, depvar::Symbol, groupvar1::Symbol, groupvar2::Symbol; type = 1, interaction = false)
+anova(::DataFrame, fm::FormulaTerm; type=1)
+anova(::StatsModels.TableRegressionModel)
 
 Performs an one-way and two-way ANOVA analysis. `depvar' is a continous variable and `groupvar1' and `groupvar2` are
 group variables. Currently, `anova` supports 2 different syntax. The first syntax requires specifying variable names, ANOVA type,
