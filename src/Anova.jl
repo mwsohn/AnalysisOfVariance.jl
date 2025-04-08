@@ -224,8 +224,7 @@ julia> aov.pvalue[3] # P-value for mpg3
 """
 function anova(_df::AbstractDataFrame, dep::Symbol, cat::Symbol)
     isa(_df[:,cat], CategoricalArray) || throw(ArgumentError("`cat` must be a Categorical Array"))
-    ba = completecases(_df[:,[dep,cat]])
-    df2 = _df[ba,[dep, cat]]
+    df2 = dropmissing(_df[ba,[dep, cat]])
     fm = @eval @formula($dep ~ 1 + $cat)
     mm = modelmatrix(fm, df2)
     X = hcat(mm,df2[!, dep])
@@ -293,7 +292,7 @@ function anova(_df::AbstractDataFrame, fm; type = 1)
     MSS = SS ./ DF
     rms = MSS[end-1]
 
-    return Stella.ANOVA(
+    return ANOVA(
         Type,
         vcat("Model", string.(cats), "Residual", "Total"),
         SS,
