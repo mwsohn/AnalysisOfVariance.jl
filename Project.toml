@@ -13,6 +13,13 @@ SweepOperator = "7522ee7d-7047-56d0-94d9-4bc626e7058d"
 Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 
 [compat]
-julia = "1.11"
+julia = "1.6"
 SweepOperator = "0.3.4"
+DataFrames = "1.7.0"
+GLM = "1.9.0"
+StatsBase = "0.34"
+CategoricalArrays = "0.10"
+PrettyTables = "2.1"
+Printf = "1.11"
+Distributions = "0.25"
 
