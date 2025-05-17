@@ -1,4 +1,4 @@
-module Anova
+module AnalysisOfVariance
 
 using DataFrames, GLM, StatsBase, SweepOperator, PrettyTables, Printf, CategoricalArrays, Distributions
 
