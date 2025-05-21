@@ -6,7 +6,7 @@ an ANOVA table for a linear or GLM model.
 
 ## Installation
 
-`] add https://github.com/mwsohn/AnalysisOfVariance.jl`
+`] add AnalysisOfVariance`
 
 ## Syntax
 
