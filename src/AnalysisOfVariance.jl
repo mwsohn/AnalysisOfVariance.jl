@@ -223,7 +223,7 @@ julia> aov.pvalue[3] # P-value for mpg3
 ```
 """
 function anova(_df::AbstractDataFrame, dep::Symbol, cat::Symbol)
-    isa(_df[:,cat], CategoricalArray) || throw(ArgumentError("`cat` must be a Categorical Array"))
+    # isa(_df[:,cat], CategoricalArray) || throw(ArgumentError("`cat` must be a Categorical Array"))
     df2 = dropmissing(_df[!,[dep, cat]])
     fm = @eval @formula($dep ~ 1 + $cat)
     mm = modelmatrix(fm, df2)
