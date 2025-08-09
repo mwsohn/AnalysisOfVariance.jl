@@ -224,7 +224,9 @@ julia> aov.pvalue[3] # P-value for mpg3
 """
 function anova(_df::AbstractDataFrame, dep::Symbol, cat::Symbol)
     df2 = dropmissing(_df[!,[dep, cat]])
-    isa(_df[:,cat], CategoricalArray) || df2[!,cat] = categorical(df2[!,cat])
+    if !isa(_df[:,cat], CategoricalArray)
+        df2[!,cat] = categorical(df2[!,cat])
+    end
     fm = @eval @formula($dep ~ 1 + $cat)
     mm = modelmatrix(fm, df2)
     X = hcat(mm,df2[!, dep])
