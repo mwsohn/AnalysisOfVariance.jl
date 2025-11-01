@@ -1,11 +1,12 @@
 name = "AnalysisOfVariance"
 uuid = "01c9c671-d471-43d2-8b89-3af15e6b824d"
-version = "v0.1.2"
+version = "v0.1.3"
 
 [deps]
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 GLM = "38e38edf-8417-5370-95a0-9cbb8c7f171a"
 StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
+StatsModels = "3eaba693-59b7-5ba5-a881-562e759f1c8d"
 CategoricalArrays = "324d7699-5711-5eae-9e2f-1d82baa6b597"
 PrettyTables = "08abe8d2-0d0c-5749-adfa-8a2ac140af0d"
 Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
@@ -15,11 +16,4 @@ Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 [compat]
 julia = "1.6"
 SweepOperator = "0.3.4"
-#DataFrames = "1.7"
-GLM = "1"
-StatsBase = "0.34"
-#CategoricalArrays = "0.10"
-#PrettyTables = "2.1"
-#Printf = "1.11"
-#Distributions = "0.25"
 
