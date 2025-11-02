@@ -259,7 +259,7 @@ function anova(_df::AbstractDataFrame, dep::Symbol, cat1::Symbol, cat2::Symbol; 
     return anova(_df, interaction ? @eval(@formula($dep ~ $cat1 + $cat2 + $cat1 * $cat2)) : @eval(@formula($dep ~ 1 + $cat1 + $cat2)), type=type)
 end
 function anova(_df::AbstractDataFrame, fm; type = 1)
-    MF = ModelFrame(fm, _df, contrasts=Dict([ x => EffectsCoding() for x in vars[2:end]]...))
+    MF = ModelFrame(fm, _df, contrasts=Dict([ x => EffectsCoding() for x in StatsModels.termvars(fm)[2:end]]...))
     terms = MF.f.rhs.terms
     cats = Vector{Symbol}[]
     nlev = Vector{Int}()
