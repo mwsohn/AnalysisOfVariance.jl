@@ -16,4 +16,11 @@ Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 [compat]
 julia = "1.6"
 SweepOperator = "0.3.4"
-
+DataFrames = "1.7"
+GLM = "1.0"
+StatsBase = "0.25"
+StatsModels = "0.5"
+CategoricalArrays = "0.5"
+PrettyTables = "2.0"
+Printf = "0.5"
+Distributions = "0.1"
