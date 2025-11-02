@@ -260,15 +260,15 @@ function anova(_df::AbstractDataFrame, dep::Symbol, cat1::Symbol, cat2::Symbol; 
 end
 function anova(_df::AbstractDataFrame, fm; type = 1)
     MF = ModelFrame(fm, _df, contrasts=Dict([ x => EffectsCoding() for x in StatsModels.termvars(fm)[2:end]]...))
-    terms = MF.f.rhs
+    term = MF.f.rhs.terms
     cats = Vector{Symbol}[]
-    nlev = Vector{Int}()
-    for i = 2:length(terms)
-        if isdefined(terms[i], :sym) && isdefined(terms[i], :contrasts)
-            push!(cats, terms[i].sym)
-            push!(nlev, length(terms[i].contrasts.levels)-1)
+    nlev = Vector{Int}[]
+    for i = 2:length(term)
+        if isdefined(term[i], :sym) && isdefined(term[i], :contrasts)
+            push!(cats, term[i].sym)
+            push!(nlev, length(term[i].contrasts.levels)-1)
         else
-            (sy, len) = get_sym_lev(terms[i].terms)
+            (sy, len) = get_sym_lev(term[i].terms)
             push!(nlev, len)
             push!(cats, Symbol(sy))
         end
