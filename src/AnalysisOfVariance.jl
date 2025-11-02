@@ -1,6 +1,6 @@
 module AnalysisOfVariance
 
-using DataFrames, GLM, StatsBase, StatsModels, SweepOperator, PrettyTables, Printf, CategoricalArrays, Distributions
+using DataFrames, GLM, StatsModels, SweepOperator, PrettyTables, Printf, CategoricalArrays, Distributions
 
 export anova, ANOVA
 
