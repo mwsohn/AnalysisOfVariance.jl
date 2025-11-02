@@ -261,8 +261,8 @@ end
 function anova(_df::AbstractDataFrame, fm; type = 1)
     MF = ModelFrame(fm, _df, contrasts=Dict([ x => EffectsCoding() for x in StatsModels.termvars(fm)[2:end]]...))
     term = MF.f.rhs.terms
-    cats = Vector{Symbol}[]
-    nlev = Vector{Int}[]
+    cats = []
+    nlev = []
     for i = 2:length(term)
         if isdefined(term[i], :sym) && isdefined(term[i], :contrasts)
             push!(cats, term[i].sym)
