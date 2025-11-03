@@ -14,7 +14,7 @@ CategoricalArrays = "324d7699-5711-5eae-9e2f-1d82baa6b597"
 
 [compat]
 julia = "1.6"
-CategoricalArrays = "0.3"
+CategoricalArrays = "0.4"
 SweepOperator = "0.3.4"
 DataFrames = "1.7"
 GLM = "1.0"
