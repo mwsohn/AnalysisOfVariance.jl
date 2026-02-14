@@ -14,11 +14,11 @@ CategoricalArrays = "324d7699-5711-5eae-9e2f-1d82baa6b597"
 
 [compat]
 julia = "1.6"
-CategoricalArrays = ">=0.0.0"
+CategoricalArrays = "^0,^1"
 SweepOperator = "^0.3"
 DataFrames = "^1.0"
 GLM = "^1.0"
 StatsModels = "0.5,0.6,0.7"
-PrettyTables = ">=0.0.0"
+PrettyTables = "^0,^1,^2,^3"
 Printf = "^1.0"
 Distributions = "^0.16,0.25"
