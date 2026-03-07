@@ -1,4 +1,4 @@
-using SweepOperator, AnalysisOfVariance, DataFrames, CategoricalArrays, Stella
+using Test, SweepOperator, AnalysisOfVariance, DataFrames, CategoricalArrays, Stella, CSV
 
 auto = CSV.read(download("https://vincentarelbundock.github.io/Rdatasets/csv/causaldata/auto.csv"), DataFrame);
 
