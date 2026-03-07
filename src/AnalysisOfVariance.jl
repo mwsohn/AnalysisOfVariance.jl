@@ -422,9 +422,10 @@ function Base.show(io::IO, a::ANOVA)
             P=vcat(pstr, missing, missing)
         );
         formatters=(ft_nomissing, ft_printf("%.3f", [2, 4, 5])),
-        hlines=[1, n],
-        vlines=[1],
-        show_subheader=false
+        table_format=TextTableFormat(;
+            @text__no_vertical_lines,
+            horizontal_lines_at_column_labels=[1],
+            vertical_line_after_row_label_column=true)
     )
 end
 
