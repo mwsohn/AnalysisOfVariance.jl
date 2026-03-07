@@ -425,7 +425,8 @@ function Base.show(io::IO, a::ANOVA)
         table_format=TextTableFormat(;
             @text__no_vertical_lines,
             horizontal_lines_at_column_labels=[1],
-            vertical_line_after_row_label_column=true)
+            vertical_line_after_row_label_column=true),
+        subheader = nothing
     )
 end
 
