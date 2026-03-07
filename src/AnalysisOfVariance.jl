@@ -413,20 +413,19 @@ function Base.show(io::IO, a::ANOVA)
     pstr = [ x < 0.0001 ? "< 0.0001" : @sprintf("%.4f", x) for x in skipmissing(a.pvalue) ]
     println(io, "\nAnalysis of Variance (",a.type,")\n")
     pretty_table(io, 
-            DataFrame(
-            Source=a.title, 
-            SS=a.ss, 
-            DF=a.df, 
-            MS=a.ms,
-            F=a.F,
-            P=vcat(pstr, missing, missing)
-        );
+            hcat(
+                a.title, 
+                a.ss, 
+                a.df, 
+                a.ms,
+                a.F,
+                vcat(pstr, missing, missing)),
+        column_labels = ["Source", "SS","DF","MS","F","P"],
         formatters=[(v,i,j) -> ismissing(v) ? "" : v, fmt__printf("%.3f", [2, 4, 5])],
         table_format=TextTableFormat(;
             @text__no_vertical_lines,
             horizontal_lines_at_column_labels=[1],
-            vertical_line_after_row_label_column=true),
-        subheader = nothing
+            vertical_line_after_row_label_column=true)
     )
 end
 
