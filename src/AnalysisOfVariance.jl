@@ -421,7 +421,7 @@ function Base.show(io::IO, a::ANOVA)
             F=a.F,
             P=vcat(pstr, missing, missing)
         );
-        formatters=[ft_nomissing, ft_printf("%.3f", [2, 4, 5])],
+        formatters=[(v,i,j) -> ismissing(v) ? "" : v, ft_printf("%.3f", [2, 4, 5])],
         table_format=TextTableFormat(;
             @text__no_vertical_lines,
             horizontal_lines_at_column_labels=[1],
