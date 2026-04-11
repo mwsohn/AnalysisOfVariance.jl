@@ -14,3 +14,12 @@ CategoricalArrays = "324d7699-5711-5eae-9e2f-1d82baa6b597"
 
 [compat]
 julia = "1.6"
+DataFrames = "1"
+GLM = "0,1"
+StatsModels = "0.6,0.7"
+PrettyTables = "3"
+Printf = "1"
+SweepOperator = "0.3"
+Distributions = "0,1"
+CategoricalArrays = "0,1"
+
