@@ -13,6 +13,7 @@ Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 CategoricalArrays = "324d7699-5711-5eae-9e2f-1d82baa6b597"
 
 [compat]
+<<<<<<< HEAD
 julia = "1.10"
 DataFrames = "1.0"
 GLM = "1.0"
@@ -22,3 +23,15 @@ Printf = "1.0"
 SweepOperator = "0.3"
 Distributions = "0,1"
 CategoricalArrays = "0,1"
+=======
+julia = "1.6"
+DataFrames = "1"
+GLM = "0,1"
+StatsModels = "0.6,0.7"
+PrettyTables = "3"
+Printf = "1"
+SweepOperator = "0.3"
+Distributions = "0,1"
+CategoricalArrays = "0,1"
+
+>>>>>>> 464fa6565f60707f23d4deb5d027ceefe4d6b070
