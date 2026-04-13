@@ -1,6 +1,6 @@
 name = "AnalysisOfVariance"
 uuid = "01c9c671-d471-43d2-8b89-3af15e6b824d"
-version = "v0.1.5"
+version = "v0.2.0"
 
 [deps]
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
@@ -13,4 +13,12 @@ Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 CategoricalArrays = "324d7699-5711-5eae-9e2f-1d82baa6b597"
 
 [compat]
-julia = "1.6"
+julia = "1.10"
+DataFrames = "1.0"
+GLM = "1.0"
+StatsModels = "0.6,0.7"
+PrettyTables = "3.0"
+Printf = "1.0"
+SweepOperator = "0.3"
+Distributions = "0,1"
+CategoricalArrays = "0,1"
